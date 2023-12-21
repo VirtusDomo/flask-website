@@ -1,0 +1,32 @@
+<!DOCTYPE hmtl>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        <title>{% block title %}My Portfolio{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    </head>
+    <body>
+        <header>
+            <!-- Header content here -->>
+        </header>
+        <nav>
+            <!-- Navigation links-->
+            <ul>
+                <li><a href="{{ url_for('index')}}">Home</a></li>
+                <li><a href="{{ url_for('about')}}">About</a></li>
+                <li><a href="{{ url_for('projects')}}">Projects</a></li>
+                <li><a href="{{ url_for('contact')}}">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            {% block content %}
+            <!-- Page specific content will go here-->
+            {% endblock %}
+        </main>
+
+        <footer>
+            <!-- Footer content will go here-->
+        </footer>
+    </body>
+</html>
